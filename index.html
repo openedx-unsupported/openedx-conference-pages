@@ -138,19 +138,27 @@
 </div>
   <div class="bg">
   <article id="focus-schedule" class="post-94 post type-post status-publish format-standard hentry category-home container">
-          <header>
-        <h2 class="entry-title">Schedule</h2>
-              </header>
-        <div class="entry-summary">
-	  <ul>
-	    {% for abs in site.data.abstracts_2015 %}
-	    <li>
-	      <p>{{ abs.name }}: {{ abs.title }}</p>
-	      <p class="abstract">{{ abs.abstract }}</p>
-	    </li>
-	    {% endfor %}
-	  </ul>
-	</div>
+    <header>
+      <h2 class="entry-title">Schedule</h2>
+    </header>
+    <div class="entry-summary">
+      <h3>Listing of Talks</h3>
+      <hr />
+      {% for abs in site.data.abstracts_2015 %}
+      <div class="row">
+	<div class=" col-md-6">
+	  <p><b>{{ abs.title }}</b></p>
+	  <p><em>{{ abs.name }}</em> </p>
+	  <p class="abstract">{{ abs.abstract }}</p>
+    </div>
+	<div class=" col-md-6">
+	  <p><b>{{ abs.title }}</b></p>
+	  <p><em>{{ abs.name }}</em> </p>
+	  <p class="abstract">{{ abs.abstract }}</p>
+    </div>
+  </div>
+      {% endfor %}
+    </div>
 
 <div class="entry-summary">
   <h3>Hackathon</h3>
