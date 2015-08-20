@@ -145,11 +145,18 @@
       <h3>Listing of Talks</h3>
       <hr />
       {% for abs in site.data.abstracts_2015 %}
-	<div class=" col-md-6">
-	  <p><b>{{ abs.title }}</b></p>
-	  <p><em>{{ abs.name }}</em> </p>
-	  <p class="abstract">{{ abs.abstract }}</p>
-    </div>
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% if thecycle == 'odd' %}
+      <div class="row">
+      {% endif %}
+        <div class=" col-md-6">
+          <p><b>{{ abs.title }}</b></p>
+          <p><em>{{ abs.name }}</em> </p>
+          <p class="abstract">{{ abs.abstract }}</p>
+        </div>
+      {% if thecycle == 'even' %}
+      </div>
+      {% endif %}
       {% endfor %}
 <div class="entry-summary col-md-12">
   <h3>Hackathon</h3>
