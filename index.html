@@ -145,20 +145,12 @@
       <h3>Listing of Talks</h3>
       <hr />
       {% for abs in site.data.abstracts_2015 %}
-      <div class="row">
 	<div class=" col-md-6">
 	  <p><b>{{ abs.title }}</b></p>
 	  <p><em>{{ abs.name }}</em> </p>
 	  <p class="abstract">{{ abs.abstract }}</p>
     </div>
-	<div class=" col-md-6">
-	  <p><b>{{ abs.title }}</b></p>
-	  <p><em>{{ abs.name }}</em> </p>
-	  <p class="abstract">{{ abs.abstract }}</p>
-    </div>
-  </div>
       {% endfor %}
-    </div>
 
 <div class="entry-summary">
   <h3>Hackathon</h3>
