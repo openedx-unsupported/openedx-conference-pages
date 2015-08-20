@@ -127,7 +127,7 @@
   <div class="bg">
   <article id="our-sponsors" class="post-7 post type-post status-publish format-standard hentry category-home container">
           <header>
-        <h2 class="entry-title">Our sponsors</h2>
+        <h2 class="entry-title">Our Sponsors</h2>
               </header>
         <div class="entry-summary">
           <p>We have great sponsorship opportunities at all levels of support. Please contact us at <a href="mailto:oscm@edx.org">oscm@edx.org</a> to learn more!
@@ -140,11 +140,20 @@
         <h2 class="entry-title">Schedule</h2>
               </header>
         <div class="entry-summary">
-      <p><strong>Call for Proposals</strong></p>
-<p>The CFP has ended. We will release a schedule soon!</p>
-<p><strong>Hackathon</strong></p>
-<p>Join us October 14-15th for the 2nd Annual Open edX Con Hackathon.&nbsp;Community members and edX developers will work together on bringing ideas to life.</p>
-    </div>
+	  <ul>
+	    {% for abs in site.data.abstracts_2015 %}
+	    <li>
+	      <p>{{ abs.name }}: {{ abs.title }}</p>
+	      <p class="abstract">{{ abs.abstract }}</p>
+	    </li>
+	    {% endfor %}
+	  </ul>
+	</div>
+
+<div class="entry-summary">
+  <h3>Hackathon</h3>
+  <p>Join us October 14-15th for the 2nd Annual Open edX Con Hackathon.&nbsp;Community members and edX developers will work together on bringing ideas to life.</p>
+</div>
   </article>
 </div>
   <div class="bg">
