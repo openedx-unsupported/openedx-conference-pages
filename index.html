@@ -145,22 +145,20 @@
       <h3>Listing of Talks</h3>
       <hr />
       {% for abs in site.data.abstracts_2015 %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% if thecycle == 'odd' %}
       <div class="row">
-	<div class=" col-md-6">
-	  <p><b>{{ abs.title }}</b></p>
-	  <p><em>{{ abs.name }}</em> </p>
-	  <p class="abstract">{{ abs.abstract }}</p>
-    </div>
-	<div class=" col-md-6">
-	  <p><b>{{ abs.title }}</b></p>
-	  <p><em>{{ abs.name }}</em> </p>
-	  <p class="abstract">{{ abs.abstract }}</p>
-    </div>
-  </div>
+      {% endif %}
+        <div class=" col-md-6">
+          <p><b>{{ abs.title }}</b></p>
+          <p><em>{{ abs.name }}</em> </p>
+          <p class="abstract">{{ abs.abstract }}</p>
+        </div>
+      {% if thecycle == 'even' %}
+      </div>
+      {% endif %}
       {% endfor %}
-    </div>
-
-<div class="entry-summary">
+<div class="entry-summary col-md-12">
   <h3>Hackathon</h3>
   <p>Join us October 14-15th for the 2nd Annual Open edX Con Hackathon.&nbsp;Community members and edX developers will work together on bringing ideas to life.</p>
 </div>
