@@ -138,7 +138,7 @@
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
         </div>
-      {% if thecycle == 'even' forloop.last %}
+      {% if thecycle == 'even' or forloop.last %}
       </div>
       {% endif %}
       {% endfor %}
