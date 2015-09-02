@@ -161,7 +161,7 @@
       <h3 id="dev-abstracts">Deploying and developing the Open edX platform</h3>
       <hr />
       {% for abs in site.data.dev_abstracts_2015 %}
-      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% capture thecycle %}{% cycle 'dev': 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
@@ -174,12 +174,11 @@
       </div>
       {% endif %}
       {% endfor %}
-      {% assign thecycle = "even" %}
 
       <h3 id="analytics-abstracts">Analytics</h3>
       <hr />
       {% for abs in site.data.analytics_abstracts_2015 %}
-      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% capture thecycle %}{% cycle 'analytics': 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
@@ -192,12 +191,11 @@
       </div>
       {% endif %}
       {% endfor %}
-      {% assign thecycle = "even" %}
 
       <h3 id="lessons-abstracts">Lessons from Open edX implementations</h3>
       <hr />
       {% for abs in site.data.lessons_abstracts_2015 %}
-      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% capture thecycle %}{% cycle 'lessons': 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
@@ -210,12 +208,11 @@
       </div>
       {% endif %}
       {% endfor %}
-      {% assign thecycle = "even" %}
 
       <h3 id="authoring-abstracts">Course authoring and extending the Open edX platform</h3>
       <hr />
       {% for abs in site.data.authoring_abstracts_2015 %}
-      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% capture thecycle %}{% cycle 'authoring': 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
@@ -228,7 +225,6 @@
       </div>
       {% endif %}
       {% endfor %}
-      {% assign thecycle = "even" %}
 
       <h3>Talks from last year</h3>
       <hr />
