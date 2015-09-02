@@ -147,7 +147,8 @@
       </div>
       <h3>Listing of talks</h3>
       <hr />
-      {% for abs in site.data.abstracts_2015 %}
+      <h4 id="dev-abstracts">Deploying and developing the Open edX platform</h3>
+      {% for abs in site.data.dev_abstracts_2015 %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
       <div class="row">
@@ -161,6 +162,55 @@
       </div>
       {% endif %}
       {% endfor %}
+
+      <h4 id="analytics-abstracts">Analytics</h3>
+      {% for abs in site.data.analytics_abstracts_2015 %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% if thecycle == 'odd' %}
+      <div class="row">
+      {% endif %}
+        <div class=" col-md-6">
+          <p><b>{{ abs.title }}</b></p>
+          <p><em>{{ abs.name }}</em> </p>
+          <p class="abstract">{{ abs.abstract }}</p>
+        </div>
+      {% if thecycle == 'even' or forloop.last == true %}
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      <h4 id="lessons-abstracts">Lessons from Open edX implementations</h3>
+      {% for abs in site.data.lessons_abstracts_2015 %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% if thecycle == 'odd' %}
+      <div class="row">
+      {% endif %}
+        <div class=" col-md-6">
+          <p><b>{{ abs.title }}</b></p>
+          <p><em>{{ abs.name }}</em> </p>
+          <p class="abstract">{{ abs.abstract }}</p>
+        </div>
+      {% if thecycle == 'even' or forloop.last == true %}
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      <h4 id="authoring-abstracts">Course authoring and extending the Open edX platform</h3>
+      {% for abs in site.data.authoring_abstracts_2015 %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% if thecycle == 'odd' %}
+      <div class="row">
+      {% endif %}
+        <div class=" col-md-6">
+          <p><b>{{ abs.title }}</b></p>
+          <p><em>{{ abs.name }}</em> </p>
+          <p class="abstract">{{ abs.abstract }}</p>
+        </div>
+      {% if thecycle == 'even' or forloop.last == true %}
+      </div>
+      {% endif %}
+      {% endfor %}
+
       <h3>Talks from last year</h3>
       <hr />
       <div class="row">
