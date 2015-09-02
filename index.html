@@ -145,9 +145,20 @@
           <p>Mitchel Resnick has been teaching and learning technology with children since the early 1990s. Along the way he has developed innovative tools, philosophies, and approaches to pedagogy. He focuses on the importance of learning over formal education structures, and creative approaches to learning.</p>
         </div>
       </div>
-      <h3>Listing of talks</h3>
+      <div class="row">
+        <div class=" col-md-12">
+          <h3>Speaker tracks</h3>
+          <hr />
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="#dev-abstracts">Deploying and developing the Open edX platform</a></li>
+            <li role="presentation"><a href="#analytics-abstracts">Analytics</a></li>
+            <li role="presentation"><a href="#lessons-abstracts">Lessons from Open edX implementations</a></li>
+            <li role="presentation"><a href="#authoring-abstracts">Course authoring and extending the Open edX platform</a></li>
+          </ul>
+        </div>
+      </div>
+      <h3 id="dev-abstracts">Deploying and developing the Open edX platform</h3>
       <hr />
-      <h4 id="dev-abstracts">Deploying and developing the Open edX platform</h3>
       {% for abs in site.data.dev_abstracts_2015 %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
@@ -163,7 +174,8 @@
       {% endif %}
       {% endfor %}
 
-      <h4 id="analytics-abstracts">Analytics</h3>
+      <h3 id="analytics-abstracts">Analytics</h3>
+      <hr />
       {% for abs in site.data.analytics_abstracts_2015 %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
@@ -179,7 +191,8 @@
       {% endif %}
       {% endfor %}
 
-      <h4 id="lessons-abstracts">Lessons from Open edX implementations</h3>
+      <h3 id="lessons-abstracts">Lessons from Open edX implementations</h3>
+      <hr />
       {% for abs in site.data.lessons_abstracts_2015 %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
@@ -195,7 +208,8 @@
       {% endif %}
       {% endfor %}
 
-      <h4 id="authoring-abstracts">Course authoring and extending the Open edX platform</h3>
+      <h3 id="authoring-abstracts">Course authoring and extending the Open edX platform</h3>
+      <hr />
       {% for abs in site.data.authoring_abstracts_2015 %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
