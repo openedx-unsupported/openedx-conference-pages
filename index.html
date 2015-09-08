@@ -23,10 +23,14 @@
 <script>window.jQuery || document.write('<script src="./assets/jquery.min.js_1.11.1"><\/script>')</script>
 	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 
-  <style>
+      <style>
         .bg1 {
-        background-image: url("./assets/stickies3.jpg");
-      }
+          background-image: url("./assets/stickies3.jpg");
+        }
+        a.abstract-link {
+          text-decoration: none;
+          color: #000000
+        }
       </style>
 </head><body class="home blog logged-in hasGoogleVoiceExt">
 
@@ -174,7 +178,7 @@
       <div class="row">
       {% endif %}
         <div class=" col-md-6" id="dev-{{ abs.slug }}">
-          <p><b><a href="#dev-{{ abs.slug }}">{{ abs.title }}</a></b></p>
+          <p><b><a href="#dev-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
           <p>&nbsp;</p>
@@ -192,7 +196,7 @@
       <div class="row">
       {% endif %}
         <div class=" col-md-6" id="analytics-{{ abs.slug }}">
-          <p><b><a href="#analytics-{{ abs.slug }}">{{ abs.title }}</a></b></p>
+          <p><b><a href="#analytics-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
           <p>&nbsp;</p>
@@ -210,7 +214,7 @@
       <div class="row">
       {% endif %}
         <div class=" col-md-6" id="lessons-{{ abs.slug }}">
-          <p><b><a href="#lessons-{{ abs.slug }}">{{ abs.title }}</a></b></p>
+          <p><b><a href="#lessons-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
           <p>&nbsp;</p>
@@ -228,7 +232,7 @@
       <div class="row">
       {% endif %}
         <div class=" col-md-6" id="#authoring-{{ abs.slug }}">
-          <p><b><a href="#authoring-{{ abs.slug }}">{{ abs.title }}</a></b></p>
+          <p><b><a href="#authoring-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
           <p>&nbsp;</p>
