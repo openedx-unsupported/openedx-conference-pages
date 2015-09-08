@@ -173,7 +173,7 @@
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
-        <div class=" col-md-6">
+        <div class=" col-md-6" id="dev-{{ abs.slug }}">
           <p><b><a href="#dev-{{ abs.slug }}">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
@@ -191,8 +191,8 @@
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
-        <div class=" col-md-6">
-          <p><b><a href="#lessons-{{ abs.slug }}">{{ abs.title }}</a></b></p>
+        <div class=" col-md-6" id="analytics-{{ abs.slug }}">
+          <p><b><a href="#analytics-{{ abs.slug }}">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
           <p>&nbsp;</p>
@@ -209,7 +209,7 @@
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
-        <div class=" col-md-6">
+        <div class=" col-md-6" id="lessons-{{ abs.slug }}">
           <p><b><a href="#lessons-{{ abs.slug }}">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
@@ -227,7 +227,7 @@
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
-        <div class=" col-md-6">
+        <div class=" col-md-6" id="#authoring-{{ abs.slug }}">
           <p><b><a href="#authoring-{{ abs.slug }}">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
