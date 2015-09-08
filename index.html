@@ -64,6 +64,7 @@
         <ul id="menu-primary-navigation" class="nav navbar-nav">
           <li class="current menu-register"><a href="#register-today">Register</a></li>
           <li class="current menu-sponsors"><a href="#our-sponsors">Sponsors</a></li>
+          <li class="current menu-schedule"><a href="#keynote">Keynote</a></li>
           <li class="current menu-schedule"><a href="#focus-schedule">Speakers</a></li>
           <li class="current menu-hackathon"><a href="#hackathon">Hackathon</a></li>
           <li class="current menu-location"><a href="#location-venue">Location & Hotels</a></li>
@@ -132,34 +133,41 @@
   </article>
 </div>
   <div class="bg">
-  <article id="focus-schedule" class="post-94 post type-post status-publish format-standard hentry category-home container">
+  <article id="keynote" class="post-94 post type-post status-publish format-standard hentry category-home container">
     <header>
-      <h2 class="entry-title">Speakers</h2>
+      <h2 class="entry-title">Keynote</h2>
     </header>
     <div class="entry-summary">
-      <h3>Keynote speaker: Mitch Resnick</h3>
+      <h3>Mitch Resnick</h3>
       <hr />
       <div class="row">
         <div class=" col-md-12">
           <p>We are thrilled to announce that Mitchel Resnick, educator, technologist, and developer of Scratch, will deliver a keynote address to Open edX Con 2015 on Monday, October 12th.</p>
           <p>Mitchel Resnick has been teaching and learning technology with children since the early 1990s. Along the way he has developed innovative tools, philosophies, and approaches to pedagogy. He focuses on the importance of learning over formal education structures, and creative approaches to learning.</p>
+          <p>&nbsp;</p>
+          <h4>Give P’s a Chance: Cultivating Creativity through Projects, Peers, Passion, and Play</h3>
+          <p>The world is changing more rapidly than ever before. Today’s students will be confronted with a never-ending stream of unknown, uncertain, and unpredictable situations throughout their lives. Their success and happiness will depend upon their ability to think and act creatively.</p>
+          <p>In this presentation, I will discuss strategies for helping students develop as creative thinkers, based on a framework of Projects, Peers, Passion, and Play. I will draw on examples from two initiatives organized by <a href="https://llk.media.mit.edu/">my research group at the MIT Media Lab</a>: the <a href="https://scratch.mit.edu/">Scratch online community</a> (scratch.mit.edu) and the <a href="https://learn.media.mit.edu/lcl">Learning Creative Learning online course.</a></p>
         </div>
       </div>
     </div>
-      <div class="row">
-        <div class=" col-md-12">
-          <h3>Speaker tracks</h3>
-          <hr />
+    </article>
+  </div>
+  <div class="bg">
+  <article id="focus-schedule" class="post-94 post type-post status-publish format-standard hentry category-home container">
+    <header>
+      <h2 class="entry-title">Speakers</h2>
+    </header>
+      <div class="entry-summary">
           <ul class="nav nav-pills nav-stacked">
             <li role="presentation"><a href="#dev-abstracts">Deploying and developing the Open edX platform</a></li>
             <li role="presentation"><a href="#analytics-abstracts">Analytics</a></li>
             <li role="presentation"><a href="#lessons-abstracts">Lessons from Open edX implementations</a></li>
             <li role="presentation"><a href="#authoring-abstracts">Course authoring and extending the Open edX platform</a></li>
           </ul>
-        </div>
+        <h3 id="dev-abstracts">Deploying and developing the Open edX platform</h3>
+        <hr />
       </div>
-      <h3 id="dev-abstracts">Deploying and developing the Open edX platform</h3>
-      <hr />
       {% for abs in site.data.dev_abstracts_2015 %}
       {% capture thecycle %}{% cycle 'dev': 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
