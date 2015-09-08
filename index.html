@@ -20,6 +20,7 @@
   <link rel="stylesheet" id="roots_css-css" href="./assets/main.min.css" type="text/css" media="all">
 <script type="text/javascript" src="./assets/modernizr.min.js"></script><style type="text/css"></style>
 <script type="text/javascript" src="./assets/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
 <script>window.jQuery || document.write('<script src="./assets/jquery.min.js_1.11.1"><\/script>')</script>
 	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 
@@ -27,7 +28,7 @@
         .bg1 {
           background-image: url("./assets/stickies3.jpg");
         }
-        a.abstract-link {
+        a.abstract-link, .remove-anchor-style, a:hover.remove-anchor-style {
           text-decoration: none;
           color: #000000
         }
@@ -177,8 +178,8 @@
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
-        <div class=" col-md-6" id="dev-{{ abs.slug }}">
-          <p><b><a href="#dev-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
+        <div class=" col-md-6" >
+          <p><b><a href="#dev-{{ abs.slug }}" id="dev-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
           <p>&nbsp;</p>
@@ -195,8 +196,8 @@
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
-        <div class=" col-md-6" id="analytics-{{ abs.slug }}">
-          <p><b><a href="#analytics-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
+        <div class=" col-md-6">
+          <p><b><a href="#analytics-{{ abs.slug }}" id="analytics-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
           <p>&nbsp;</p>
@@ -213,8 +214,8 @@
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
-        <div class=" col-md-6" id="lessons-{{ abs.slug }}">
-          <p><b><a href="#lessons-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
+        <div class=" col-md-6">
+          <p><b><a href="#lessons-{{ abs.slug }}" id="lessons-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
           <p>&nbsp;</p>
@@ -231,8 +232,8 @@
       {% if thecycle == 'odd' %}
       <div class="row">
       {% endif %}
-        <div class=" col-md-6" id="#authoring-{{ abs.slug }}">
-          <p><b><a href="#authoring-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
+        <div class=" col-md-6">
+          <p><b><a href="#authoring-{{ abs.slug }}" id="#authoring-{{ abs.slug }}" class="abstract-link">{{ abs.title }}</a></b></p>
           <p><em>{{ abs.name }}</em> </p>
           <p class="abstract">{{ abs.abstract }}</p>
           <p>&nbsp;</p>
@@ -418,6 +419,9 @@ Email us at&nbsp;<a href="mailto: oscm@edx.org">oscm@edx.org</a><br>
 
   ga('create', 'UA-60396627-3', 'auto');
   ga('send', 'pageview');
-
+  anchors.options = {
+    class: 'remove-anchor-style',
+  };
+  anchors.add('.abstract-link');
 </script>
 </body></html>
